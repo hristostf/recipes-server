@@ -7,7 +7,9 @@ module.exports = class Product {
 				name: faker.commerce.product(),
 				price: faker.commerce.price(),
 				description: faker.lorem.paragraph(),
-				image: `${faker.image.food()}?random=${Date.now()}`,
+				image: `${faker.image.food()}?random=${
+					Math.random() * Date.now()
+				}`,
 			});
 		}
 
